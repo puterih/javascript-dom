@@ -18,9 +18,31 @@ const close = document.querySelectorAll('.close');
 // }
 
 close.forEach(function(el) {
+	console.log(el);
 	el.addEventListener('click', function(e) {
 		e.target.parentElement.style.display = 'none';
-		alert('apakah anda yakin ingin menghapus ini?');
 		alert('ok. Makasii lh buang aku-_-');
 	});
 });
+
+
+const nama = document.querySelector('.nama');
+console.log(nama.previousElementSibling);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
