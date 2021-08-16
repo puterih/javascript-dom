@@ -8,7 +8,7 @@
 
 
 // DOM Transversal
-const close = document.querySelectorAll('.close');
+// const close = document.querySelectorAll('.close');
 
 // for( let i = 0; i < close.length; i++ ) {
 // 	close[i].addEventListener('click', function(e) {
@@ -17,17 +17,44 @@ const close = document.querySelectorAll('.close');
 // 	});
 // }
 
-close.forEach(function(el) {
-	console.log(el);
-	el.addEventListener('click', function(e) {
+// close.forEach(function(el) {
+// 	console.log(el);
+// 	el.addEventListener('click', function(e) {
+// 		e.target.parentElement.style.display = 'none';
+// 		alert('ok. Makasii lh buang aku-_-');
+// 		e.preventDefault();
+// 		e.stopPropagation();
+// 	});
+// });
+
+
+
+// const cards = document.querySelectorAll('.card');
+// cards.forEach(function(card) {
+// 	card.addEventListener('click', function(e) {
+// 		alert('ok');
+// 	});
+// });
+
+
+const container = document.querySelector('.container');
+
+container.addEventListener('click', function(e) {
+	if( e.target.className == 'close' ) {
 		e.target.parentElement.style.display = 'none';
-		alert('ok. Makasii lh buang aku-_-');
-	});
+		e.preventDefault();
+		// preventDefault untuk berjaga kalau kita klik link
+	}
 });
 
 
-const nama = document.querySelector('.nama');
-console.log(nama.previousElementSibling);
+
+
+// const nama = document.querySelector('.nama');
+// console.log(nama.previousElementSibling);
+
+
+
 
 
 
