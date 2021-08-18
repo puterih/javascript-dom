@@ -20,11 +20,18 @@ container.addEventListener('click', function(e) {
 			jumbo.classList.remove('fade')
 		}, 500);
 
+		thumbs.forEach(function(thumb) {
+			// if( thumb.classList.container('active') ) {
+			// 	thumb.classList.remove('active');
+			// }
+			thumb.className = 'thumb';
+		});
+
 		e.target.classList.add('active');
 	}
 
 });
 
 	
-// BELUM SELESAI
+// SELESAI
 
