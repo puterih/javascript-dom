@@ -27,7 +27,6 @@ const p2 = document.querySelector('.p2');
 // element.removeAttribute()
 
 
-
 // manipulasi di console web
 // element.classList.add() untuk menambahkan
 // element.classList.remove() untuk menghilangkan class yg ada

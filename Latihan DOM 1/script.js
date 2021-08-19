@@ -5,18 +5,11 @@ tUbahWarna.onclick = function() {
 	document.body.classList.toggle('biru-muda');
 }
 
-
-
-
-
-
-
 const tAcakWarna = document.createElement('button');
 const teksTombol = document.createTextNode('Acak Warna');
 tAcakWarna.appendChild(teksTombol);
 tAcakWarna.setAttribute('type', 'button');
 tUbahWarna.after(tAcakWarna);
-
 
 tAcakWarna.addEventListener('click', function() {
 	const r = Math.round(Math.random() * 255 + 1);
@@ -24,7 +17,6 @@ tAcakWarna.addEventListener('click', function() {
 	const b = Math.round(Math.random() * 255 + 1);
 	document.body.style.backgroundColor ='rgb('+ r +','+ g +','+ b +')';
 });
-
 
 
 const sMerah = document.querySelector('input[name=sMerah]');
