@@ -47,16 +47,18 @@ sBiru.addEventListener('input', function() {
 });
 
 
-// document.body.addEventListener('mousemove', function(event) {
-// 	// posisi mouse
-// 	// console.log(event.clientY);
-// 	// ukuran browser
-// 	// console.log(window.innerWidth);
-// 	const xPos = Math.round(event.clientX)
+document.body.addEventListener('mousemove', function() {
+	// posisi mouse
+	// console.log(event.clientY);
+	// // ukuran browser
+	console.log(window.innerWidth);
+	const xPos = Math.round((event.clientX / window.innerWidth) * 255);
+	const yPos = Math.round((event.clientY / window.innerHeight) * 255);
+	document.body.style.backgroundColor = 'rgb('+ xPos +','+ yPos +',100)';
+	
+});
 
-// yg di catatan blm ngerti:(
-// lanjut besok
-
+// THE END
 
 
 
