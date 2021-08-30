@@ -13,44 +13,80 @@ function getHasil(comp, player) {
 }
 
 
-const pGajah = document.querySelector('.gajah');
-pGajah.addEventListener('click', function(){
-	const pilihanComputer = getPilihanComputer();
-	const pilihanPlayer = pGajah.className;
-	const hasil = getHasil(pilihanComputer, pilihanPlayer);
-	
-	const imgComputer = document.querySelector('.img-komputer');
-	imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+function putar() {
+	const imgComputer = document.querySelector('img-komputer');
+	const gambar = ['gajah', 'semut', 'orang'];
+	setInterval(function() {
+		let i = 0;
+// setInterval fungsinya utk membuat sesuatu bisa berulang ulang pd waktu tertentu
+		imgComputer.setAttribute('src', 'img/' + gambar[i++] + ',png');
+		if( i == gambar.length ) i = 0;
 
-	const info = document.querySelector('.info');
+	}, 100)  
+
+}
+
+
+const pilihan = document.querySelectorAll('li img');
+pilihan.forEach(function(pil) {
+	pil.addEventListener('click', function() {
+
+	    const pilihanComputer = getPilihanComputer();
+	    const pilihanPlayer = pil.className;
+	    const hasil = getHasil(pilihanComputer, pilihanPlayer);
+
+	    putar();
+	
+	    const imgComputer = document.querySelector('.img-komputer');
+	    imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+
+	    const info = document.querySelector('.info');
 		info.innerHTML = hasil;
+	});
 });
 
-const pOrang = document.querySelector('.orang');
-pOrang.addEventListener('click', function(){
-	const pilihanComputer = getPilihanComputer();
-	const pilihanPlayer = pOrang.className;
-	const hasil = getHasil(pilihanComputer, pilihanPlayer);
+
+// pusing ah salah mulu :), bsok lnjut
+
+
+// const pGajah = document.querySelector('.gajah');
+// pGajah.addEventListener('click', function(){
+// 	const pilihanComputer = getPilihanComputer();
+// 	const pilihanPlayer = pGajah.className;
+// 	const hasil = getHasil(pilihanComputer, pilihanPlayer);
 	
-	const imgComputer = document.querySelector('.img-komputer');
-	imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+// 	const imgComputer = document.querySelector('.img-komputer');
+// 	imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
 
-	const info = document.querySelector('.info');
-		info.innerHTML = hasil;
-});
+// 	const info = document.querySelector('.info');
+// 		info.innerHTML = hasil;
+// });
 
-const pSemut = document.querySelector('.semut');
-pSemut.addEventListener('click', function(){
-	const pilihanComputer = getPilihanComputer();
-	const pilihanPlayer = pSemut.className;
-	const hasil = getHasil(pilihanComputer, pilihanPlayer);
+// const pOrang = document.querySelector('.orang');
+// pOrang.addEventListener('click', function(){
+// 	const pilihanComputer = getPilihanComputer();
+// 	const pilihanPlayer = pOrang.className;
+// 	const hasil = getHasil(pilihanComputer, pilihanPlayer);
 	
-	const imgComputer = document.querySelector('.img-komputer');
-	imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+// 	const imgComputer = document.querySelector('.img-komputer');
+// 	imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
 
-	const info = document.querySelector('.info');
-		info.innerHTML = hasil;
-});
+// 	const info = document.querySelector('.info');
+// 		info.innerHTML = hasil;
+// });
+
+// const pSemut = document.querySelector('.semut');
+// pSemut.addEventListener('click', function(){
+// 	const pilihanComputer = getPilihanComputer();
+// 	const pilihanPlayer = pSemut.className;
+// 	const hasil = getHasil(pilihanComputer, pilihanPlayer);
+	
+// 	const imgComputer = document.querySelector('.img-komputer');
+// 	imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+
+// 	const info = document.querySelector('.info');
+// 		info.innerHTML = hasil;
+// });
 
 
 
