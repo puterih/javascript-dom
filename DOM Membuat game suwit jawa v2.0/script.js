@@ -12,41 +12,44 @@ function getHasil(comp, player) {
     if( player == 'semut' ) return ( comp == 'orang' ) ? 'KALAH' : 'MENANG!';
 }
 
-
 function putar() {
-	const imgComputer = document.querySelector('img-komputer');
+	const imgComputer = document.querySelector('.img-komputer');
 	const gambar = ['gajah', 'semut', 'orang'];
+	let i = 0;
+	const waktuMulai = new Date().getTime();
 	setInterval(function() {
-		let i = 0;
-// setInterval fungsinya utk membuat sesuatu bisa berulang ulang pd waktu tertentu
-		imgComputer.setAttribute('src', 'img/' + gambar[i++] + ',png');
+		if( new Date().getTime() - waktuMulai > 1000 ) {
+			clearInterval;
+			return;
+		}
+		imgComputer.setAttribute('src', 'img/' + gambar[i++] + '.png');
 		if( i == gambar.length ) i = 0;
-
-	}, 100)  
-
+	}, 100)
+	// 100 adalah 0,1 detik
+// setInterval fungsi utk melakukan sesuatu secara berulang selama interval wktu tertentu
 }
-
 
 const pilihan = document.querySelectorAll('li img');
 pilihan.forEach(function(pil) {
 	pil.addEventListener('click', function() {
-
 	    const pilihanComputer = getPilihanComputer();
 	    const pilihanPlayer = pil.className;
 	    const hasil = getHasil(pilihanComputer, pilihanPlayer);
 
 	    putar();
+
+	    setTimeout(function() {
+
+	    }, 1000)
+	    // 1000 adalah 1 detik
 	
 	    const imgComputer = document.querySelector('.img-komputer');
 	    imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
 
 	    const info = document.querySelector('.info');
-		info.innerHTML = hasil;
+		info.innerHTML = hasil; 
 	});
 });
-
-
-// pusing ah salah mulu :), bsok lnjut
 
 
 // const pGajah = document.querySelector('.gajah');
@@ -89,18 +92,7 @@ pilihan.forEach(function(pil) {
 // });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// latihan selesai
 
 
 
