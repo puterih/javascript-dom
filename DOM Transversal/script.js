@@ -23,7 +23,15 @@ close.forEach(function(el) {
 	el.addEventListener('click', function(e) {
 		e.target.parentElement.style.display = 'none';
 		e.preventDefault();
+		e.stopPropagation();
 // preventDefault yaitu cegah aksi default
+	});
+});
+
+const cards = document.querySelectorAll('.card');
+cards.forEach(function(card) {
+	card.addEventListener('click', function(e) {
+		alert('ok');
 	});
 });
 
@@ -35,3 +43,5 @@ close.forEach(function(el) {
 // console.log(nama.nextElementSibling);
 // console.log(nama.previousSibling);
 // console.log(nama.previousElementSibling);
+
+// lanjut nanti Event BUbbling
