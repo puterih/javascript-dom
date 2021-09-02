@@ -44,6 +44,10 @@ body {
     font-size: 20px;
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card .telp {
     margin-left: 20px;
     margin-top: 6px;
@@ -64,3 +68,5 @@ body {
 .card:hover .close {
     color: red;
 }
+
+/*lanjut nanti*/

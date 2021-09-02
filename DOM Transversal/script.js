@@ -22,12 +22,14 @@ const close = document.querySelectorAll('.close');
 close.forEach(function(el) {
 	el.addEventListener('click', function(e) {
 		e.target.parentElement.style.display = 'none';
+		e.preventDefault();
+// preventDefault yaitu cegah aksi default
 	});
 });
 
-const nama = document.querySelector('.nama');
-// bisa cek console
-console.log(nama.parentNode);
+// const nama = document.querySelector('.nama');
+// // bisa cek console
+// console.log(nama.parentNode);
 // console.log(nama.parentElement);
 // console.log(nama.nextSibling);
 // console.log(nama.nextElementSibling);
