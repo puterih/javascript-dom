@@ -21,34 +21,53 @@
 
 // 2. Function Declaration
 
-const methodMahasiswa = {
-	makan: function (porsi) {
-		this.energi += porsi;
-		console.log(`Halo ${this.nama}, selamat makan!`);
-	},
+// const methodMahasiswa = {
+// 	makan: function (porsi) {
+// 		this.energi += porsi;
+// 		console.log(`Halo ${this.nama}, selamat makan!`);
+// 	},
 
-	main: function (jam) {
-		this.energi -= porsi;
-		console.log(`Halo ${this.nama}, selamat Bermain!`);
-	},
+// 	main: function (jam) {
+// 		this.energi -= porsi;
+// 		console.log(`Halo ${this.nama}, selamat Bermain!`);
+// 	},
 
-	tidur: function(jam) {
-		this.energi += jam * 2;
-		console.log(`Halo ${this.nama}, selamat Tidur!`);
-	}
-};
+// 	tidur: function(jam) {
+// 		this.energi += jam * 2;
+// 		console.log(`Halo ${this.nama}, selamat Tidur!`);
+// 	}
+// };
+
+// function Mahasiswa(nama, energi) {
+// 	let mahasiswa = Object.create(methodMahasiswa);
+// // Object.create langsung menunjukkan parent objectnya
+// 	mahasiswa.nama = nama;
+// 	mahasiswa.energi = energi;
+
+//  return mahasiswa;
+// }
+
+// let puteri = Mahasiswa('Puteri', 10);
+// let husnul = Mahasiswa('husnul', 20);
+
 
 function Mahasiswa(nama, energi) {
-	let mahasiswa = Object.create(methodMahasiswa);
+	// let mahasiswa = Object.create(methodMahasiswa);
 // Object.create langsung menunjukkan parent objectnya
+   let mahasiswa = {};
 	mahasiswa.nama = nama;
 	mahasiswa.energi = energi;
 
  return mahasiswa;
 }
 
-let puteri = Mahasiswa('Puteri', 10);
-let husnul = Mahasiswa('husnul', 20);
+
+
+
+
+
+
+
 
 // 3. Constructor function
 // Keyward new
